@@ -4,4 +4,4 @@ My java project where I worked on spring, hibernate and postgre sql in accordanc
 
 # Db diagram
 
-<img src="" />
+<img src="https://github.com/frknbltci/HumanResourcesProject/blob/main/HumanRHomeWorkDb.PNG" />
