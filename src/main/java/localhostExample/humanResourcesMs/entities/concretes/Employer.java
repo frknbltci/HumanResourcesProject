@@ -3,6 +3,7 @@ package localhostExample.humanResourcesMs.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,7 +16,7 @@ public class Employer {
 
 	@Id
 	@Column(name="Id")
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="UserId")
@@ -29,15 +30,5 @@ public class Employer {
 	
 	@Column(name="Phone")
 	private String phone;
-	public Employer() {
-		
-	}
 	
-	public Employer(int id,int userId,String companyName,String webSite) {
-		super();
-		this.userId=userId;
-		this.id=id;
-		this.companyName=companyName;
-		this.webSite=webSite;
-	}
 }

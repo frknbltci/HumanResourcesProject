@@ -3,6 +3,7 @@ package localhostExample.humanResourcesMs.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,7 +15,7 @@ import lombok.Data;
 public class EmployerVerify {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Id")
 	private int id;
 	
@@ -27,18 +28,6 @@ public class EmployerVerify {
 	@Column(name="EmployerId")
 	private int employerId;
 	
-	public EmployerVerify() {
-		
-	}
-	
-	public EmployerVerify(int id,boolean emailVerify,boolean stafVerify,int employerId) {
-		super();
-		this.emailVerify=emailVerify;
-		this.id=id;
-		this.stafVerify=stafVerify;
-		this.employerId=employerId;
-		
-	}
 	
 	
 }
