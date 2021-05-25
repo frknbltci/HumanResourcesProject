@@ -11,12 +11,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@Table(name="EmployersVerify")
+@Entity
+@Table(name="JobSeekerVerify")
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployerVerify {
+public class JobSeekerVerify {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +24,8 @@ public class EmployerVerify {
 	private int id;
 	
 	@Column(name="EmailVerify")
-	private boolean emailVerify;
+	private boolean emailVerify; 
 	
-	@Column(name="StafVerify")
-	private boolean stafVerify;
-	
-	@Column(name="EmployerId")
-	private int employerId;
-	
-	
-	
+	@Column(name="JobSeekerId")
+	private int jobseekerId;
 }

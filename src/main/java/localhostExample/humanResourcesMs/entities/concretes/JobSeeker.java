@@ -1,5 +1,7 @@
 package localhostExample.humanResourcesMs.entities.concretes;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,28 +13,37 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@Table(name="Employers")
+@Entity
+@Table(name="JobSeekers")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employer {
+
+public class JobSeeker {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="Id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="UserId")
 	private int userId;
 	
-	@Column(name="CompanyName")
-	private String companyName;
+	@Column(name="TcIdentityNumber")
+	private String tcIdentityNumber;
 	
-	@Column(name="WebSite")
-	private String webSite;
+	@Column(name="JobPositionId")
+	private int jobPositionId;
 	
-	@Column(name="Phone")
-	private String phone;
+	@Column(name="Name")
+	private String name;
 	
+	@Column(name="Surname")
+	private String surname;
+	
+	@Column(name="CreatedDate")
+	private Date createdDate;
+	
+	@Column(name="BirthDate")
+	private Date birthdate;
 }
